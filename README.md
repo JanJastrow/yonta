@@ -17,4 +17,4 @@ A pretty theme for Miniflux, based on the [Yonta](https://github.com/meradoou/yo
 
 ## License
 same as original  
-(unknown at the moment)
+*(unknown at the moment)*
