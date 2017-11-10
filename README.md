@@ -1,6 +1,6 @@
 # Yonta-Fork (until I find a better name)
 
-A pretty theme for Miniflux, based on the [Yonta](https://github.com/meradoou/yonta) theme by [meradoou]((https://github.com/meradoou).
+A pretty theme for Miniflux, based on the [Yonta](https://github.com/meradoou/yonta) theme by [meradoou](https://github.com/meradoou).
 
 ## screenshot
 ![Overview; Screenshot by meradoou](screenshot.png)
