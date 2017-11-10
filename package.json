@@ -1,0 +1,27 @@
+{
+  "name": "Yonta-fork",
+  "version": "0.1.0",
+  "description": "A small intranet page.",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JanJastrow/yonta"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cache": "^1.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-sass": "^2.1.0",
+    "gulp-watch": "^4.3.0"
+  },
+  "author": "Jan Jastrow",
+  "license": ""
+}
