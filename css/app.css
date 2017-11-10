@@ -366,8 +366,6 @@ header nav a  span {
 }
 #grouplist li {
     display: inline;
-}
-#grouplist li + li {
     margin-right:  10px;
 }
 #grouplist li a,
