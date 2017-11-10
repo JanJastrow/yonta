@@ -23,10 +23,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.mi-favorite:before {
+.mi-favorite::before {
   content: "\e87d";
 }
-.mi-unfavorite:before {
+.mi-unfavorite::before {
   content: "\e87e";
 }
 
