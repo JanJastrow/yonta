@@ -27,7 +27,7 @@ gulp.task('styles', function() {var onError = function(err) {
         .pipe(plumber({errorHandler: onError}))
         .pipe(sass({ style: 'expanded' }))
         .pipe(autoprefixer('last 2 version', 'IE 11', 'safari 9', 'Firefox ESR', 'ios 10', 'android 5'))
-        .pipe(rename("app.unminified.css"))
+        .pipe(rename("app.not-minified.css"))
         .pipe(gulp.dest('./css'))
         .pipe(cssmin())
         .pipe(rename("app.css"))
