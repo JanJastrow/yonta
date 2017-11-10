@@ -2,7 +2,7 @@
 
 A pretty theme for Miniflux, based on the [Yonta](https://github.com/meradoou/yonta) theme by [meradoou](https://github.com/meradoou).
 
-## screenshot
+## Screenshots
 ![Overview; Screenshot by meradoou](screenshot.png)
 
 ## Changelog
@@ -16,4 +16,5 @@ A pretty theme for Miniflux, based on the [Yonta](https://github.com/meradoou/yo
 - iOS 11.1
 
 ## License
-same as original (unknown at the moment)
+same as original  
+(unknown at the moment)
