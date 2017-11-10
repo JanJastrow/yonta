@@ -537,11 +537,8 @@ header nav a  span {
     list-style-type: none;
     align-items: center;
 }
-#current-item .item-infos li {
-    margin-right: 10px;
-}
 #current-item .item-infos li ~ li::before {
-    content: ' - ';
+    content: '\00a0- ';
 }
 #current-item .item-infos a,
 #current-item .item-infos li {
