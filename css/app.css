@@ -442,6 +442,9 @@ header nav a  span {
     font-size: 1.8rem;
     font-weight: normal;
 }
+#listing article[data-item-status="read"] .item-title a {
+    color: #999;
+}
 #listing article .item-menu,
 [data-item-page="feeds"] article ul{
     display: flex;
@@ -654,6 +657,7 @@ header nav a  span {
 .items article[data-feed-disabled] {
     background-color: #E0E0E0;
 }
+
 .items article h2 {
     font-size: 1.9rem;
     font-weight: normal
