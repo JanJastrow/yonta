@@ -6,12 +6,12 @@
 ----------------------------------------------------------------------------- */
 
 @import 'webfonts';
+@import 'vars';
 
 /* = Reset
 ----------------------------------------------------------------------------- */
-* {
-    -moz-box-sizing: border-box;
-         box-sizing: border-box;
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     word-wrap: break-word;
@@ -22,55 +22,51 @@ html {
 }
 
 body {
-    font-size: 1rem;
-    color: #333;
     background-color: #efebe9;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #333;
+    font-size: 1rem;
+    font-family: $font-sansserif;
     text-rendering: optimizeLegibility;
-}
-body.fixed {
-    overflow: hidden;
+
+    .fixed {
+        overflow: hidden;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
-    font-family: Georgia, Times, serif;
+    font-family: $font-serif;
 }
 
 blockquote {
     border-left: 4px solid #ddd;
-    padding-left: 25px;
+    color: #888;
+    line-height: 1.4em;
     margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: #888;
-    line-height: 1.4em;
+    padding-left: 25px;
+
+    & + p {
+        color: #555;
+        font-style: italic;
+    }
 }
 
 q {
     color: purple;
-    font-family: Georgia, serif;
-    font-style: italic;
-}
-
-blockquote + p {
-    color: #555;
+    font-family: $font-serif;
     font-style: italic;
 }
 
 figcaption {
-    font-size: 0.8em;
     color: #777;
+    font-size: 0.8em;
 }
 
 .hide {
     display: none
 }
 
-a {
-    text-decoration: none;
-}
 
 /* = Containers
 ----------------------------------------------------------------------------- */
@@ -78,9 +74,10 @@ a {
 body > header,
 body > .page,
 #miniflux {
-    max-width: 960px;
     margin: 0 auto;
+    max-width: 960px;
 }
+
 body > .page  {
     margin-bottom: 20px;
 }
@@ -91,19 +88,30 @@ form {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 15px;
-}
 
-form h3 {
-    font-weight: bold;
-}
+    h3 {
+        font-weight: bold;
+        font-size: 1.4rem;
 
-form h3:first-child {
-    margin-top: 0;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
 }
 
 label {
     cursor: pointer;
     display: block;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+form label[for] {
+    font-weight: bold;
+}
+
+form > input {
+    margin-bottom: 20px;
 }
 
 input[type="checkbox"] {
@@ -116,13 +124,13 @@ input[type="tel"],
 input[type="password"],
 input[type="number"],
 input[type="text"] {
-    padding: 10px 5px;
-    font-size: 1.2rem;
+    border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: inset 0 1px 3px #ddd;
-    border: 1px solid #ccc;
+    font-size: 1.0rem;
     line-height: 1.7;
     margin-bottom: 10px;
+    padding: 10px 5px;
 }
 
 input[type="email"]:focus,
@@ -131,87 +139,83 @@ input[type="password"]:focus,
 input[type="number"]:focus,
 input[type="text"]:focus,
 textarea:focus {
+    border-color: $color_redish;
+    box-shadow: 0 0 8px $color_redish;
     color: #333;
-    border-color: #ef5350;
     outline: 0;
-    box-shadow: 0 0 8px #ef5350;
 }
 
 input[type="number"] {
-    width: 40px;
+    width: 3em;
 }
+
 select {
     background-color: #fff;
-    padding: 10px 5px;
-    display: inline-block;
     border: 1px solid #ccc;
-    box-shadow: inset 0 1px 3px #ddd;
     border-radius: 5px;
-    vertical-align: middle;
+    box-shadow: inset 0 1px 3px #ddd;
     box-sizing: border-box;
+    display: inline-block;
+    font-size: 1.0rem;
+    margin-bottom: 15px;
+    padding: 5px;
+    vertical-align: middle;
 }
+
 textarea {
     border: 1px solid #ccc;
+    font-size: 99%;
+    height: 200px;
     padding: 3px;
     width: 400px;
-    height: 200px;
-    font-size: 99%;
-}
-select {
-    margin-bottom: 15px;
 }
 
-::-webkit-input-placeholder {
-    color: #bbb;
-    padding-top: 2px;
-}
-
+::-webkit-input-placeholder,
+::-moz-placeholder,
 ::-ms-input-placeholder {
     color: #bbb;
     padding-top: 2px;
 }
 
-::-moz-placeholder {
-    color: #bbb;
-    padding-top: 2px;
-}
-
 .form-actions {
+    align-items: center;
+    display: flex;
     margin-top: 30px;
     margin-bottom: 30px;
-    display: flex;
-    align-items: center
 }
+
 .form-actions a {
-    color: #ef5350;
+    color: $color_redish;
     margin: 0 10px;
 }
+
 .form-actions a:hover {
     text-decoration: underline
 }
 
 input.form-error,
 textarea.form-error {
-    border: 2px solid #FFAB00;
+    border: 2px solid $color_notice;
 }
 
 .form-errors {
-    color: #FFAB00;
-    margin-left: 15px;
+    color: $color_notice;
     list-style-type: none;
+    margin-left: 15px;
 }
 
 .form-help {
+    color: $color_notice;
     font-size: 0.9em;
-    color:#FFAB00;
     margin-bottom: 15px;
 }
 
 .search::after {
     display: block;
-    content: '';
+    content: none;
     clear: both;
 }
+
 #search-opener,
 #search-form {
     float: right;
@@ -224,8 +228,23 @@ textarea.form-error {
     font-size: 1.2rem;
     font-family: inherit;
     margin: 0 10px;
-    cursor: pointer
+    cursor: pointer;
+
+    .btn-blue {
+        background-color: $color_blueish;
+        color: #fff;
+    }
+
+    .btn-red{
+        background-color: $color_redish;
+        color: #FFF;
+
+        &:hover {
+            text-decoration: none
+        }
+    }
 }
+
 .btn:focus,
 .btn:hover,
 [data-item-page="config"]  a[href="?action=new-user"]:focus,
@@ -234,17 +253,7 @@ textarea.form-error {
     background-image: -webkit-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
     background-image: linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
 }
-.btn.btn-blue {
-    background-color: #0078e7;
-    color: #fff;
-}
-.btn.btn-red{
-    background-color: #ef5350;
-    color: #FFF;
-}
-.btn.btn-red:hover {
-    text-decoration: none
-}
+
 code,
 pre {
     background-color: #333;
@@ -255,46 +264,60 @@ pre {
     margin: 10px;
     color: #FFF;
 }
-label {
-    margin-bottom: 10px;
+
+form #grouplist {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+
+    label {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+
+        input:checked + span {
+            color: $color_redish;
+        }
+    }
 }
+
  /* = Menu
 ----------------------------------------------------------------------------- */
 #miniflux > header,
 body > header {
     margin: 20px auto;
 }
+
 header nav .logo {
     display: none;
 }
-header nav ul,
-#items-paging {
+
+header nav ul {
     display: flex;
     justify-content: flex-end;
+
+    li {
+        list-style-type: none;
+        margin-left: 5px;
+    }
 }
-header nav li,
-#items-paging a {
-    list-style-type: none;
-    margin-left: 5px;
-}
+
 header nav a,
-header nav .menu-more-switcher,
-#items-paging a  {
+header nav .menu-more-switcher {
     text-decoration: none;
     color: #FFF;
-    background-color: #ef5350;
+    background-color: $color_redish;
     padding: 5px;
     font-size: 85%;
 }
+
 header nav li.active a,
 header nav a:hover,
-header nav .menu-more-switcher:hover,
-#menu-more a:hover,
-#menu-more a:active,
-#items-paging a:hover {
-    background-color: #7F7D7C;
+header nav .menu-more-switcher:hover {
+    background-color: $color_greyish;
 }
-header nav a  span {
+
+header nav a span {
     margin-left: 5px;
     font-weight: bold;
 }
@@ -304,24 +327,48 @@ header nav a  span {
     top: 55px;
     left: 5px;
     right: 5px;
-    background-color: #ef5350;
+    background-color: $color_redish;
+
+    li {
+        margin-bottom: 1px;
+    }
+
+    a {
+        padding: 5px 10px;
+        color: #FFF;
+        text-decoration: none;
+        display: block;
+
+        &:hover,
+        &:active {
+            background-color: $color_greyish;
+        }
+    }
 }
-#menu-more li {
-    margin-bottom: 1px;
-}
-#menu-more a {
-    padding: 5px 10px;
-    color: #FFF;
-    text-decoration: none;
-    display: block;
-}
+
 #bottom-menu {
     display: none;
 }
-#items-paging {
-    margin: 20px auto;
-}
 
+#items-paging {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px auto;
+
+    a {
+        background-color: $color_redish;
+        color: #FFF;
+        font-size: 0.8rem;
+        list-style-type: none;
+        margin-left: 5px;
+        padding: 5px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $color_greyish;
+        }
+    }
+}
 
  /* = Page
 ----------------------------------------------------------------------------- */
@@ -348,14 +395,14 @@ header nav a  span {
 .feed-groups li a {
     font-size: 1.4rem;
     text-decoration: none;
-    color: #7F7D7C;
+    color: $color_greyish;
     font-style: italic;
 }
 #grouplist li.active a,
 #grouplist li a:hover,
 .feed-groups li a:hover,
 .feed-groups li.active a {
-    color: #ef5350;
+    color: $color_redish;
     text-decoration: underline;
 }
 
@@ -377,7 +424,7 @@ header nav a  span {
 [data-item-page="feeds"] nav a,
 [data-item-page="config"] nav a {
     text-decoration: none;
-    color: #ef5350;
+    color: $color_redish;
     font-weight: bold;
     font-size: 1.5rem;
 }
@@ -413,7 +460,7 @@ header nav a  span {
 }
 #listing article .bookmark-icon,
 #listing article .read-icon {
-    color: #ef5350;
+    color: $color_redish;
     font-size: 1.2em;
 }
 #listing article[data-item-bookmark="0"] .bookmark-icon::before {
@@ -473,13 +520,13 @@ header nav a  span {
 #listing article .item-menu span {
     font-size: 1.2rem;
     text-decoration: none;
-    color: #7F7D7C;
+    color: $color_greyish;
 }
 #listing article .item-menu span {
     text-transform: lowercase;
 }
 #listing article .item-menu a:hover {
-    color: #ef5350;
+    color: $color_redish;
     text-decoration: underline;
 }
 
@@ -491,7 +538,7 @@ header nav a  span {
     border-collapse: collapse
 }
 [data-item-page="config"] table th {
-    background-color: #7F7D7C;
+    background-color: $color_greyish;
     color: #FFF;
     padding: 10px 0;
 }
@@ -504,7 +551,7 @@ header nav a  span {
 }
 [data-item-page="config"] a:hover {
     text-decoration: underline;
-    color: #ef5350;
+    color: $color_redish;
 }
 [data-item-page="config"] .options {
     margin: 15px auto;
@@ -517,7 +564,7 @@ header nav a  span {
     padding: 10px;
     margin: 20px auto;
     max-width: 170px;
-    background-color: #ef5350;
+    background-color: $color_redish;
     color: #FFF;
     text-align: center
 }
@@ -552,12 +599,12 @@ header nav a  span {
 }
 #current-item .item-infos a,
 #current-item .item-infos li {
-    color: #7F7D7C;
+    color: $color_greyish;
     text-decoration: none;
 }
 #current-item .item-infos a:hover {
     text-decoration: underline;
-    color: #ef5350;
+    color: $color_redish;
 }
 #current-item .bookmark-icon {
     font-family: 'mi';
@@ -582,7 +629,7 @@ header nav a  span {
     margin-left: 15px;
 }
 #current-item .bottom a {
-    color: #ef5350;
+    color: $color_redish;
     font-size: 1.6rem;
     font-weight: bold;
     text-decoration: none;
@@ -643,7 +690,7 @@ header nav a  span {
 }
 #current-item #item-content a:hover,
 #current-item #item-content a:focus {
-    color: #ef5350;
+    color: $color_redish;
     text-decoration: underline;
 }
 #current-item figure {
@@ -705,37 +752,13 @@ header nav a  span {
     margin-top: 10px;
 }
 .items article .item-menu a {
-    color: #ef5350;
+    color: $color_redish;
 }
 .items article .item-menu a:hover {
     text-decoration: underline;
     color: #333;
 }
 
- /* = Edit feed
------------------------------------------------------------------------------ */
-form label {
-    font-size: 1.5rem;
-}
-form label[for] {
-    font-weight: bold;
-}
-form > input {
-    margin-bottom: 20px;
-}
-form #grouplist {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px auto;
-}
-form #grouplist label {
-    margin-right: 10px;
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-}
-form #grouplist label input:checked + span {
-    color: #ef5350;
-}
 
  /* = Alert
 ----------------------------------------------------------------------------- */
@@ -772,18 +795,20 @@ form #grouplist label input:checked + span {
     right: 0;
     top: 0;
     bottom: 0;
+
+    section {
+        background-color: #FFF;
+        max-width: 960px;
+        margin: 10px auto;
+        border-radius: 5px;
+        padding: 10px;
+        overflow: hidden;
+    }
+    ul {
+        margin: 20px;
+    }
 }
-#help-layer section {
-    background-color: #FFF;
-    max-width: 960px;
-    margin: 10px auto;
-    border-radius: 5px;
-    padding: 10px;
-    overflow: hidden;
-}
-#help-layer ul {
-    margin: 20px;
-}
+
 #help-layer .btn-close {
     width: 30px;
     height: 30px;
@@ -801,20 +826,24 @@ form #grouplist label input:checked + span {
 
  /* = Panel
 ----------------------------------------------------------------------------- */
-.panel {
+section.panel {
     margin-bottom: 20px;
+
+    ul {
+        margin: 10px 20px;
+    }
 }
-.panel ul {
-    margin: 10px 20px;
-}
-.panel .panel-danger {
-    background-color: #ef5350;
+
+section.panel section.panel-danger {
+    background-color: $color_redish;
     color: #fff;
+
+    a {
+        color: #FFF;
+        text-decoration: underline
+    }
 }
-.panel .panel-danger a {
-    color: #FFF;
-    text-decoration: underline
-}
+
  /* = Media query
 ----------------------------------------------------------------------------- */
 
