@@ -127,10 +127,10 @@ input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: inset 0 1px 3px #ddd;
-    font-size: 1.0rem;
+    font-size: 1rem;
     line-height: 1.7;
     margin-bottom: 10px;
-    padding: 10px 5px;
+    padding: 5px 7px;
 }
 
 input[type="email"]:focus,
@@ -156,7 +156,7 @@ select {
     box-shadow: inset 0 1px 3px #ddd;
     box-sizing: border-box;
     display: inline-block;
-    font-size: 1.0rem;
+    font-size: 1rem;
     margin-bottom: 15px;
     padding: 5px;
     vertical-align: middle;
@@ -187,10 +187,14 @@ textarea {
 .form-actions a {
     color: $color_redish;
     margin: 0 10px;
+
+    &.btn {
+        color: #fff;
+    }
 }
 
 .form-actions a:hover {
-    text-decoration: underline
+    text-decoration: inherit;
 }
 
 input.form-error,
@@ -211,9 +215,9 @@ textarea.form-error {
 }
 
 .search::after {
-    display: block;
     content: none;
     clear: both;
+    display: block;
 }
 
 #search-opener,
@@ -222,27 +226,24 @@ textarea.form-error {
 }
 
 .btn {
-    padding: 10px;
     border: 1px solid transparent;
     border-radius: 5px;
+    cursor: pointer;
     font-size: 1.2rem;
     font-family: inherit;
     margin: 0 10px;
-    cursor: pointer;
+    padding: 10px;
+}
 
-    .btn-blue {
-        background-color: $color_blueish;
-        color: #fff;
-    }
+.btn-blue {
+    background-color: $color_blueish;
+    color: #fff;
+}
 
-    .btn-red{
-        background-color: $color_redish;
-        color: #FFF;
-
-        &:hover {
-            text-decoration: none
-        }
-    }
+.btn-red {
+    background-color: $color_redish;
+    color: #fff;
+    text-decoration: none;
 }
 
 .btn:focus,
@@ -262,7 +263,7 @@ pre {
     display: block;
     overflow: hidden;
     margin: 10px;
-    color: #FFF;
+    color: #fff;
 }
 
 form #grouplist {
@@ -304,11 +305,11 @@ header nav ul {
 
 header nav a,
 header nav .menu-more-switcher {
-    text-decoration: none;
-    color: #FFF;
     background-color: $color_redish;
+    color: #fff;
+    font-size: 0.8rem;
     padding: 5px;
-    font-size: 85%;
+    text-decoration: none;
 }
 
 header nav li.active a,
@@ -322,11 +323,16 @@ header nav a span {
     font-weight: bold;
 }
 
+/* Mark all as read */
+#bottom-menu {
+    display: none;
+}
+
 #menu-more {
     position: absolute;
     top: 55px;
-    left: 5px;
     right: 5px;
+    left: 5px;
     background-color: $color_redish;
 
     li {
@@ -335,7 +341,7 @@ header nav a span {
 
     a {
         padding: 5px 10px;
-        color: #FFF;
+        color: #fff;
         text-decoration: none;
         display: block;
 
@@ -346,10 +352,6 @@ header nav a span {
     }
 }
 
-#bottom-menu {
-    display: none;
-}
-
 #items-paging {
     display: flex;
     justify-content: flex-end;
@@ -357,7 +359,7 @@ header nav a span {
 
     a {
         background-color: $color_redish;
-        color: #FFF;
+        color: #fff;
         font-size: 0.8rem;
         list-style-type: none;
         margin-left: 5px;
@@ -372,65 +374,95 @@ header nav a span {
 
  /* = Page
 ----------------------------------------------------------------------------- */
-.page-header > h2,
-.page-section > h2{
-    font-size: 1.8rem;
+.page-section > h2 {
+    font-size: 1.5rem;
     font-weight: normal;
     margin-bottom: 20px;
 }
-.page-header > h2 span {
-    font-weight: bold;
-    margin-left: 10px;
+
+.page-header > h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+
+    span {
+        font-weight: bold;
+        margin-left: 10px;
+    }
 }
 
 #grouplist {
     list-style-type: none;
     margin-bottom: 20px;
-}
-#grouplist li {
-    display: inline;
-    margin-right:  10px;
-}
-#grouplist li a,
-.feed-groups li a {
-    font-size: 1.4rem;
-    text-decoration: none;
-    color: $color_greyish;
-    font-style: italic;
-}
-#grouplist li.active a,
-#grouplist li a:hover,
-.feed-groups li a:hover,
-.feed-groups li.active a {
-    color: $color_redish;
-    text-decoration: underline;
+
+    li {
+        display: inline;
+        margin-right: 0.3em;
+
+        &.active a {
+            color: $color_redish;
+            text-decoration: underline;
+        }
+
+        a {
+            color: $color_greyish;
+            font-size: 1rem;
+            font-style: italic;
+            text-decoration: none;
+
+            &:hover {
+                color: $color_redish;
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
-.page-header > ul,
-[data-item-page="feeds"] nav ul,
-[data-item-page="config"] nav ul {
+.page-header > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     list-style-type: none;
     margin: 20px auto;
+
+    li {
+        margin-right: 10px;
+    }
+
+    a {
+        color: $color_redish;
+        font-weight: bold;
+        font-size: 1rem;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+/* = Prefences
+----------------------------------------------------------------------------- */
+
+[data-item-page="config"] nav ul {
     display: flex;
-    justify-content: flex-end;
     flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 20px auto;
+
+    li {
+        margin-right: 10px;
+    }
+    a {
+        color: $color_redish;
+        font-weight: bold;
+        font-size: 1.1rem;
+        text-decoration: none;
+    }
 }
-.page-header > ul li,
-[data-item-page="feeds"] nav ul li,
-[data-item-page="config"] nav ul li {
-    margin-right: 10px;
-}
-.page-header > ul a,
-[data-item-page="feeds"] nav a,
-[data-item-page="config"] nav a {
-    text-decoration: none;
-    color: $color_redish;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-.page-header > ul a:hover,
-[data-item-page="feeds"] nav a:hover,
-[data-item-page="feeds"] nav .active a,
+
 [data-item-page="config"] nav a:hover,
 [data-item-page="config"] nav .active a {
     text-decoration: underline;
@@ -442,33 +474,40 @@ header nav a span {
 [data-item-page="feeds"] article,
 [data-item-page="feeds"] form,
 [data-item-page="config"] section {
-    background-color: #FFF;
+    background-color: #fff;
     border-radius: 5px;
-    padding: 5px 10px;
     margin-bottom: 10px;
+    padding: 5px 10px;
 }
-/*
--- TODO
-*/
+
 #listing article .item-icons {
     display: inline-block;
     float: right;
     margin-left: 0.2em;
+
+    a {
+        text-decoration: none;
+    }
 }
+
 #listing article .item-icons::after {
     clear: both;
 }
+
 #listing article .bookmark-icon,
 #listing article .read-icon {
     color: $color_redish;
     font-size: 1.2em;
 }
+
 #listing article[data-item-bookmark="0"] .bookmark-icon::before {
-    content: '\e87d';
+    content: '\e87e';
+    font-family: 'mi';
 }
 
 #listing article[data-item-bookmark="1"] .bookmark-icon::before {
-    content: '\e87e';
+    content: '\e87d';
+    font-family: 'mi';
 }
 
 #listing article[data-item-status="read"] .read-icon::before {
@@ -478,94 +517,112 @@ header nav a span {
 #listing article[data-item-status="unread"] .read-icon::before {
     content: '✔';
 }
-/*
--- TODO
-*/
 
 #listing article .item-title {
     display: flex;
 }
+
 #listing article .favicon {
-    width: 24px;
     margin-right: 10px;
     max-height: 24px;
+    width: 24px;
 }
+
 #listing article .item-title a {
-    text-decoration: none;
     color: #333;
     font-size: 1.2rem;
     font-weight: normal;
+    text-decoration: none;
 }
+
 #listing article[data-item-status="read"] .item-title a {
     color: #999;
 }
+
 #listing article .item-menu,
 [data-item-page="feeds"] article ul{
     display: flex;
     list-style-type: none;
 }
+
 #listing article .item-menu li,
 [data-item-page="feeds"] article li {
     margin-right: 5px;
 }
+
 #listing article .item-menu li ~ li::before,
 [data-item-page="feeds"] article li ~ li::before  {
-    content: ' - ';
+    content: ' ◦ ';
 }
+
 #listing article .item-menu li:nth-child(2) {
     display: none;
 }
+
 #listing article .item-menu li,
 #listing article .item-menu a,
 #listing article .item-menu span {
-    font-size: 1.2rem;
-    text-decoration: none;
     color: $color_greyish;
+    font-size: 0.9rem;
+    text-decoration: none;
 }
+
 #listing article .item-menu span {
     text-transform: lowercase;
 }
+
 #listing article .item-menu a:hover {
     color: $color_redish;
     text-decoration: underline;
 }
 
+#listing article .item-menu [data-action="bookmark"] {
+    display: none
+}
+
  /* = Config
 ----------------------------------------------------------------------------- */
-[data-item-page="config"]  table {
-    width: 100%;
+[data-item-page="config"] table {
+    border-collapse: collapse;
     font-size: 1.2rem;
-    border-collapse: collapse
+    width: 100%;
 }
+
 [data-item-page="config"] table th {
     background-color: $color_greyish;
-    color: #FFF;
+    color: #fff;
     padding: 10px 0;
 }
+
 [data-item-page="config"] table td {
-    text-align: center;
     padding: 10px 0;
+    text-align: center;
 }
+
 [data-item-page="config"] a {
-    color: #7F2626;
+    color: darken($color_redish, 20%);
 }
+
 [data-item-page="config"] a:hover {
-    text-decoration: underline;
     color: $color_redish;
+    text-decoration: underline;
 }
+
 [data-item-page="config"] .options {
     margin: 15px auto;
 }
+
 [data-item-page="config"]  label {
     margin-bottom: 10px;
 }
+
 [data-item-page="config"]  a[href="?action=new-user"] {
+    background-color: $color_redish;
+    color: #fff;
     display: block;
-    padding: 10px;
     margin: 20px auto;
     max-width: 170px;
-    background-color: $color_redish;
-    color: #FFF;
+    padding: 10px;
     text-align: center
 }
 
@@ -573,85 +630,104 @@ header nav a span {
 ----------------------------------------------------------------------------- */
 #current-item,
 .panel {
-    background-color: #FFF;
+    background-color: #fff;
     border-radius: 5px;
     padding: 10px;
 }
+
 #current-item h1 {
-    margin: 0 0 15px;
-    line-height: 1.1;
     font-size: 1.8rem;
+    line-height: 1.1;
+    margin: 0 0 15px;
 }
+
 #current-item h1 a {
     color: #484948;
     text-decoration: none
 }
+
 #current-item nav.top {
     display: none;
 }
+
 #current-item .item-infos {
+    align-items: center;
     display: flex;
     list-style-type: none;
-    align-items: center;
 }
+
 #current-item .item-infos li ~ li::before {
     content: '\00a0- ';
 }
+
 #current-item .item-infos a,
 #current-item .item-infos li {
     color: $color_greyish;
     text-decoration: none;
 }
+
 #current-item .item-infos a:hover {
-    text-decoration: underline;
     color: $color_redish;
+    text-decoration: underline;
 }
+
 #current-item .bookmark-icon {
     font-family: 'mi';
     font-size: 1.4rem;
     line-height: 23px;
 }
+
 #current-item .item-infos a.bookmark-icon:hover {
     text-decoration: none;
 }
+
 #current-item .bookmark-icon::after {
     content: "\e87e";
 }
+
 #current-item[data-item-bookmark="1"] .bookmark-icon::after {
     content: "\e87d";
 }
+
 #current-item .bottom {
-    margin: 20px 0;
     display: flex;
     justify-content: flex-end;
+    margin: 20px 0;
 }
+
 #current-item .bottom span {
     margin-left: 15px;
 }
+
 #current-item .bottom a {
     color: $color_redish;
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
 }
+
 #current-item .bottom a:hover {
     text-decoration: underline;
 }
+
 #current-item #item-content {
+    font-size: 1rem;
     margin: 20px auto;
     overflow: hidden;
-    font-size: 1.7rem;
 }
+
 #current-item #item-content img {
-    max-width: 100%;
+    display: block;
     margin: 15px auto;
-    display: block
+    max-width: 100%;
 }
+
 #current-item #item-content p {
+    font-size: 1rem;
     line-height: 1.5;
-    font-size: 1.6rem;
     margin-bottom: 15px;
 }
+
 #current-item #item-content h1,
 #current-item #item-content h2,
 #current-item #item-content h3,
@@ -661,132 +737,203 @@ header nav a span {
     margin-bottom: 10px;
     margin-top: 15px;
 }
+
 #current-item #item-content h1 {
     font-size: 2rem;
 }
+
 #current-item #item-content h2 {
     font-size: 1.9rem;
 }
+
 #current-item #item-content h3 {
     font-size: 1.8rem;
 }
+
 #current-item #item-content h4 {
     font-size: 1.7rem;
 }
+
 #current-item #item-content h5 {
     font-size: 1.6rem
 }
+
 #current-item #item-content h6 {
     font-size: 1.5rem
 }
+
 #current-item #item-content ul,
 #current-item #item-content ol,
 .page-section + section ul  {
     list-style-type: square;
     margin: 10px 30px;
 }
+
 #current-item #item-content a {
-    color: #7F5251;
+    color: darken($color_redish, 20%);
 }
+
 #current-item #item-content a:hover,
 #current-item #item-content a:focus {
     color: $color_redish;
     text-decoration: underline;
 }
+
 #current-item figure {
     display: block;
+    margin: 10px auto;
     max-width: 100%;
     overflow: hidden;
-    margin: 10px auto;
 }
+
 #current-item #item-content  figure img {
     margin-bottom: 5px;
 }
+
 #current-item figure figcaption {
     margin-bottom: 15px;
 }
 
- /* = Subscriptions
+/* = Subscriptions > Feeds
 ----------------------------------------------------------------------------- */
+
+[data-item-page="feeds"] nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 20px auto;
+
+    li {
+        margin-right: 10px;
+    }
+    a {
+        color: $color_redish;
+        font-weight: bold;
+        font-size: 1.1rem;
+        text-decoration: none;
+    }
+}
+
+[data-item-page="feeds"] nav a:hover,
+[data-item-page="feeds"] nav .active a {
+    text-decoration: underline;
+}
+
 .items article[data-feed-disabled] {
     background-color: #E0E0E0;
 }
 
 .items article h2 {
-    font-size: 1.9rem;
-    font-weight: normal
+    font-size: 1.2rem;
+    font-weight: normal;
+
+    .favicon {
+        max-height: 24px;
+        vertical-align: middle;
+    }
+
+    a {
+        color: #333;
+        font-size: 1.2rem;
+    }
 }
 
-.items article h2 .favicon {
-    max-height: 24px;
-    vertical-align: middle;
-}
-.items article h2 a {
-    color: #333;
-    font-size: 2rem;
-}
 .items article h2.loading-icon a {
-    color: #FFAB00;
+    color: $color_notice;
 }
+
 .items article .items-count {
-    font-weight: bold;
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-left: 0.2em;
+
+    &::before {
+        content: '(';
+    }
+    &::after {
+        content: ')';
+    }
 }
+
 .items article .feed-last-checked {
+    color: $color_greyish;
+    display: block;
+    font-size: 1rem;
     margin-top: 10px;
 }
-.items article .feed-last-checked,
+
 .items article .feed-parsing-error {
-    display: block;
-    font-size: 1.4rem;
-    color: #616161;
-}
-.items article .feed-parsing-error {
+    color: $color_notice;
     display: none;
-    color: #FFAB00;
+    font-size: 1rem;
+    margin-top: 10px;
 }
+
 .items article[data-feed-error="1"] .feed-parsing-error {
     display: block;
 }
-.items article .feed-groups,
-.items article .item-menu {
+
+.items article .feed-groups {
     margin-top: 10px;
 }
-.items article .item-menu a {
+
+.items article .item-menu {
+    margin-top: 10px;
+
+    a {
+        color: $color_redish;
+
+        &:hover {
+            text-decoration: underline;
+            color: #333;
+        }
+    }
+}
+
+.feed-groups li a {
+    color: $color_greyish;
+    font-size: 1rem;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.feed-groups li a:hover,
+.feed-groups li.active a {
     color: $color_redish;
-}
-.items article .item-menu a:hover {
     text-decoration: underline;
-    color: #333;
 }
 
-
- /* = Alert
+/* = Alert
 ----------------------------------------------------------------------------- */
 .alert {
     background-color: transparent;
     border: 1px solid transparent;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 1.6rem;
+    border-radius: 6px;
+    font-size: 1rem;
     margin: 15px 0;
-}
-.alert-success {
-    color: #FFF;
-    background-color: #009688;
-    border-color: #4DB6AC;
-}
-.alert-error {
-    color: #333;
-    background-color: #FFAB00;
-    border-color: #FFE57F;
-}
-.alert-info {
-    color: #FFF;
-    background-color: #0078e7;
-    border-color: #E3F2FD;
+    padding: 10px;
 }
 
- /* = Help
+.alert-success {
+    background-color: $color_turquoise;
+    border-color: darken($color_turquoise, 10%);
+    color: #fff;
+}
+
+.alert-error {
+    background-color: $color_notice;
+    border-color: darken($color_notice, 10%);
+    color: #333;
+}
+
+.alert-info {
+    background-color: rgba(0,0,0,0.15);
+    border-color: rgba(0,0,0,0.25);
+    color: #333;
+}
+
+/* = Help
 ----------------------------------------------------------------------------- */
 #help-layer {
     background-color: rgba(0, 0, 0, 0.9);
@@ -797,12 +944,12 @@ header nav a span {
     bottom: 0;
 
     section {
-        background-color: #FFF;
-        max-width: 960px;
-        margin: 10px auto;
+        background-color: #fff;
         border-radius: 5px;
-        padding: 10px;
+        margin: 10px auto;
+        max-width: 960px;
         overflow: hidden;
+        padding: 10px;
     }
     ul {
         margin: 20px;
@@ -810,23 +957,23 @@ header nav a span {
 }
 
 #help-layer .btn-close {
-    width: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.2rem;
     height: 30px;
     line-height: 30px;
-    background-color: #FFF;
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    font-size: 1.7rem;
     position: absolute;
     right: 10%;
     top: 20px;
-    cursor: pointer;
+    text-align: center;
+    width: 30px;
 }
 
- /* = Panel
+/* = Panel
 ----------------------------------------------------------------------------- */
-section.panel {
+section .panel {
     margin-bottom: 20px;
 
     ul {
@@ -834,12 +981,12 @@ section.panel {
     }
 }
 
-section.panel section.panel-danger {
+section .panel .panel-danger {
     background-color: $color_redish;
     color: #fff;
 
     a {
-        color: #FFF;
+        color: #fff;
         text-decoration: underline
     }
 }
@@ -900,6 +1047,6 @@ section.panel section.panel-danger {
     [data-item-page="config"] table th:nth-child(3),
     [data-item-page="config"] table td:nth-child(2),
     [data-item-page="config"] table td:nth-child(3) {
-        display: none
+        display: none;
     }
 }
