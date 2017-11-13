@@ -8,13 +8,13 @@ A pretty theme for Miniflux, based on the [Yonta](https://github.com/meradoou/yo
 ## Changelog
 
 ### v0.1
-- Optimizations for mobile usage
 - Uses OS native font
+- Optimisations for mobile usage
 
 ## Tested with
 - Firefox 55.x
+- Safari 11
 - iOS 11.1
 
 ## License
-same as original  
-*(unknown at the moment)*
+MIT
