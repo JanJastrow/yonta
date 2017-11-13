@@ -1,11 +1,11 @@
 {
   "name": "Yonta-fork",
   "version": "0.1.0",
-  "description": "A small intranet page.",
+  "description": "A theme for Miniflux.",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JanJastrow/yonta"
+    "url": "https://github.com/JanJastrow/yonta-fork"
   },
   "dependencies": {},
   "devDependencies": {
@@ -23,5 +23,5 @@
     "gulp-watch": "^4.3.0"
   },
   "author": "Jan Jastrow",
-  "license": ""
+  "license": "MIT"
 }
