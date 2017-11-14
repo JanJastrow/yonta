@@ -13,8 +13,9 @@ A pretty theme for Miniflux, based on the [Yonta](https://github.com/meradoou/yo
 
 ## Tested with
 - Firefox 55.x
-- Safari 11
-- iOS 11.1
+- macOS 10.13 / Safari 11
+- iOS 11.1 / Safari 11
+- Android 6 / Chrome 62
 
 ## License
 MIT
