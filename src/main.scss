@@ -1032,6 +1032,13 @@ section .panel .panel-danger {
         display: none;
     }
 
+    #listing article .item-title a {
+        font-size: 1.05rem;
+        word-break: break-all;
+        word-break: break-word; /* WebKit only */
+        hyphens: auto;
+    }
+
     #current-item .item-infos li {
         margin-right: 0.5em;
     }
