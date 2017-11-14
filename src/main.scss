@@ -667,6 +667,7 @@ header nav a span {
 
 #current-item #item-content {
     font-size: 1rem;
+    line-height: 1.5;
     margin: 20px auto;
     overflow: hidden;
 }
@@ -678,9 +679,7 @@ header nav a span {
 }
 
 #current-item #item-content p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 15px;
+    margin-bottom: 0.65em;
 }
 
 #current-item #item-content h1,
