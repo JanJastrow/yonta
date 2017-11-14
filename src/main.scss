@@ -917,13 +917,13 @@ header nav a span {
 
 .alert-success {
     background-color: $color_turquoise;
-    border-color: darken($color_turquoise, 10%);
+    border-color: darken($color_turquoise, 5%);
     color: #fff;
 }
 
 .alert-error {
     background-color: $color_notice;
-    border-color: darken($color_notice, 10%);
+    border-color: darken($color_notice, 5%);
     color: #333;
 }
 
