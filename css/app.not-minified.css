@@ -363,7 +363,8 @@ header nav a span {
   margin-bottom: 20px; }
   #grouplist li {
     display: inline;
-    margin-right: 0.3em; }
+    margin-right: 0.3em;
+    line-height: 1.7; }
     #grouplist li.active a {
       color: #ef5350;
       text-decoration: underline; }
@@ -516,44 +517,6 @@ header nav a span {
 #listing article .item-menu [data-action="bookmark"] {
   display: none; }
 
-/* = Config
------------------------------------------------------------------------------ */
-[data-item-page="config"] table {
-  border-collapse: collapse;
-  font-size: 1.2rem;
-  width: 100%; }
-
-[data-item-page="config"] table th {
-  background-color: #7f7d7c;
-  color: #fff;
-  padding: 10px 0; }
-
-[data-item-page="config"] table td {
-  padding: 10px 0;
-  text-align: center; }
-
-[data-item-page="config"] a {
-  color: #c71612; }
-
-[data-item-page="config"] a:hover {
-  color: #ef5350;
-  text-decoration: underline; }
-
-[data-item-page="config"] .options {
-  margin: 15px auto; }
-
-[data-item-page="config"] label {
-  margin-bottom: 10px; }
-
-[data-item-page="config"] a[href="?action=new-user"] {
-  background-color: #ef5350;
-  color: #fff;
-  display: block;
-  margin: 20px auto;
-  max-width: 170px;
-  padding: 10px;
-  text-align: center; }
-
 /* = Single
 ----------------------------------------------------------------------------- */
 #current-item,
@@ -563,8 +526,8 @@ header nav a span {
   padding: 10px; }
 
 #current-item h1 {
-  font-size: 1.8rem;
-  line-height: 1.1;
+  font-size: 1.6rem;
+  line-height: 1.3;
   margin: 0 0 15px; }
 
 #current-item h1 a {
@@ -632,6 +595,7 @@ header nav a span {
 
 #current-item #item-content {
   font-size: 1rem;
+  line-height: 1.5;
   margin: 20px auto;
   overflow: hidden; }
 
@@ -641,9 +605,7 @@ header nav a span {
   max-width: 100%; }
 
 #current-item #item-content p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 15px; }
+  margin-bottom: 0.65em; }
 
 #current-item #item-content h1,
 #current-item #item-content h2,
@@ -655,22 +617,22 @@ header nav a span {
   margin-top: 15px; }
 
 #current-item #item-content h1 {
-  font-size: 2rem; }
+  font-size: 1.55rem; }
 
 #current-item #item-content h2 {
-  font-size: 1.9rem; }
+  font-size: 1.45rem; }
 
 #current-item #item-content h3 {
-  font-size: 1.8rem; }
+  font-size: 1.35rem; }
 
 #current-item #item-content h4 {
-  font-size: 1.7rem; }
+  font-size: 1.3rem; }
 
 #current-item #item-content h5 {
-  font-size: 1.6rem; }
+  font-size: 1.25rem; }
 
 #current-item #item-content h6 {
-  font-size: 1.5rem; }
+  font-size: 1.2rem; }
 
 #current-item #item-content ul,
 #current-item #item-content ol,
@@ -679,11 +641,12 @@ header nav a span {
   margin: 10px 30px; }
 
 #current-item #item-content a {
-  color: #c71612; }
+  color: #c71612;
+  text-decoration: none; }
 
 #current-item #item-content a:hover,
 #current-item #item-content a:focus {
-  color: #ef5350;
+  color: #98110e;
   text-decoration: underline; }
 
 #current-item figure {
@@ -697,6 +660,44 @@ header nav a span {
 
 #current-item figure figcaption {
   margin-bottom: 15px; }
+
+/* = Config
+----------------------------------------------------------------------------- */
+[data-item-page="config"] table {
+  border-collapse: collapse;
+  font-size: 1.2rem;
+  width: 100%; }
+
+[data-item-page="config"] table th {
+  background-color: #7f7d7c;
+  color: #fff;
+  padding: 10px 0; }
+
+[data-item-page="config"] table td {
+  padding: 10px 0;
+  text-align: center; }
+
+[data-item-page="config"] a {
+  color: #c71612; }
+
+[data-item-page="config"] a:hover {
+  color: #ef5350;
+  text-decoration: underline; }
+
+[data-item-page="config"] .options {
+  margin: 15px auto; }
+
+[data-item-page="config"] label {
+  margin-bottom: 10px; }
+
+[data-item-page="config"] a[href="?action=new-user"] {
+  background-color: #ef5350;
+  color: #fff;
+  display: block;
+  margin: 20px auto;
+  max-width: 170px;
+  padding: 10px;
+  text-align: center; }
 
 /* = Subscriptions > Feeds
 ----------------------------------------------------------------------------- */
@@ -797,12 +798,12 @@ header nav a span {
 
 .alert-success {
   background-color: #009688;
-  border-color: #00635a;
+  border-color: #007d71;
   color: #fff; }
 
 .alert-error {
   background-color: #ffab00;
-  border-color: #cc8900;
+  border-color: #e69a00;
   color: #333; }
 
 .alert-info {
@@ -821,7 +822,7 @@ header nav a span {
   bottom: 0; }
   #help-layer section {
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 6px;
     margin: 10px auto;
     max-width: 960px;
     overflow: hidden;
@@ -834,7 +835,7 @@ header nav a span {
   border-radius: 50%;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   height: 30px;
   line-height: 30px;
   position: absolute;
@@ -870,7 +871,6 @@ section .panel .panel-danger {
     display: none; } }
 
 @media only screen and (max-width: 480px) {
-  ul li.hide-mobile,
   .hide-mobile {
     display: none; }
   #miniflux,
@@ -885,10 +885,18 @@ section .panel .panel-danger {
     padding: 10px 5px; }
   #listing article .favicon {
     display: none; }
+  #listing article .item-title a {
+    font-size: 1.05rem;
+    word-break: break-all;
+    word-break: break-word;
+    /* WebKit only */
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto; }
   #current-item .item-infos li {
     margin-right: 0.5em; }
   #current-item .item-infos li > a.bookmark-icon {
-    margin-left: 0.25em;
+    margin-left: 0.1em;
     margin-right: 0.25em; }
   #current-item .item-infos li ~ li::before {
     content: none; }
