@@ -1036,13 +1036,14 @@ section .panel .panel-danger {
     }
 
     #current-item .item-infos li > a.bookmark-icon {
-        margin-left: 0.25em;
+        margin-left: 0.1em;
         margin-right: 0.25em;
     }
 
     #current-item .item-infos li ~ li::before {
         content: none;
     }
+
     [data-item-page="config"] table th:nth-child(2),
     [data-item-page="config"] table th:nth-child(3),
     [data-item-page="config"] table td:nth-child(2),
