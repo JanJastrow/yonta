@@ -398,6 +398,7 @@ header nav a span {
     li {
         display: inline;
         margin-right: 0.3em;
+        line-height: 1.7;
 
         &.active a {
             color: $color_redish;
