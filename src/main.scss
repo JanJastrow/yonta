@@ -726,11 +726,12 @@ header nav a span {
 
 #current-item #item-content a {
     color: darken($color_redish, 20%);
+    text-decoration: none;
 }
 
 #current-item #item-content a:hover,
 #current-item #item-content a:focus {
-    color: $color_redish;
+    color: darken($color_redish, 30%);
     text-decoration: underline;
 }
 
