@@ -946,7 +946,7 @@ header nav a span {
 
     section {
         background-color: #fff;
-        border-radius: 5px;
+        border-radius: 6px;
         margin: 10px auto;
         max-width: 960px;
         overflow: hidden;
@@ -962,7 +962,7 @@ header nav a span {
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     height: 30px;
     line-height: 30px;
     position: absolute;
@@ -999,6 +999,7 @@ section .panel .panel-danger {
     #help-layer section {
         margin-top: 50px;
     }
+
     #help-layer .btn-close {
         right: 24%;
     }
@@ -1010,19 +1011,21 @@ section .panel .panel-danger {
 }
 
 @media only screen and (max-width: 480px) {
-    ul li.hide-mobile,
     .hide-mobile {
         display: none;
     }
+
     #miniflux,
     body > header,
     body > .page {
         margin: 0 5px;
     }
+
     body > header {
         margin-top: 20px;
         margin-bottom: 20px;
     }
+
     header nav a,
     header nav .menu-more-switcher  {
         padding: 10px 5px;
