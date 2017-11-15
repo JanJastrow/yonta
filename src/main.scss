@@ -214,15 +214,15 @@ textarea.form-error {
     margin-bottom: 15px;
 }
 
+#search-opener,
+#search-form {
+    float: right;
+}
+
 .search::after {
     content: none;
     clear: both;
     display: block;
-}
-
-#search-opener,
-#search-form {
-    float: right;
 }
 
 .btn {
