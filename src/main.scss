@@ -498,25 +498,24 @@ header nav a span {
 #listing article .bookmark-icon,
 #listing article .read-icon {
     color: $color_redish;
-    font-size: 1.2em;
+    font-family: 'icomoon';
+    font-size: 26px;
 }
 
 #listing article[data-item-bookmark="0"] .bookmark-icon::before {
-    content: '\e87e';
-    font-family: 'mi';
+    content: $icon-heart-outlined;
 }
 
 #listing article[data-item-bookmark="1"] .bookmark-icon::before {
-    content: '\e87d';
-    font-family: 'mi';
+    content: $icon-heart;
 }
 
 #listing article[data-item-status="read"] .read-icon::before {
-    content: '✘';
+    content: $icon-check_box;
 }
 
 #listing article[data-item-status="unread"] .read-icon::before {
-    content: '✔';
+    content: $icon-check;
 }
 
 #listing article .item-title {
@@ -608,6 +607,7 @@ header nav a span {
 #current-item .item-infos {
     align-items: center;
     display: flex;
+    font-size: 0.9rem;
     list-style-type: none;
 }
 
@@ -627,21 +627,20 @@ header nav a span {
 }
 
 #current-item .bookmark-icon {
-    font-family: 'mi';
-    font-size: 1.4rem;
-    line-height: 23px;
+    font-family: 'icomoon';
+    font-size: 1.3rem;
 }
 
 #current-item .item-infos a.bookmark-icon:hover {
     text-decoration: none;
 }
 
-#current-item .bookmark-icon::after {
-    content: "\e87e";
+#current-item[data-item-bookmark="0"] .bookmark-icon::after {
+    content: $icon-heart-outlined;
 }
 
 #current-item[data-item-bookmark="1"] .bookmark-icon::after {
-    content: "\e87d";
+    content: $icon-heart;
 }
 
 #current-item .bottom {

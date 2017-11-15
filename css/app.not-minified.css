@@ -7,28 +7,13 @@
 /* = Webfonts
 ----------------------------------------------------------------------------- */
 @font-face {
-  font-family: 'mi';
-  src: url("../fonts/mi.eot?kxwszc");
-  src: url("../fonts/mi.eot?kxwszc#iefix") format("embedded-opentype"), url("../fonts/mi.ttf?kxwszc") format("truetype"), url("../fonts/mi.woff?kxwszc") format("woff"), url("../fonts/mi.svg?kxwszc#mi") format("svg");
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?2wnfsz");
+  src: url("../fonts/icomoon.eot?2wnfsz#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?2wnfsz") format("truetype"), url("../fonts/icomoon.woff?2wnfsz") format("woff"), url("../fonts/icomoon.svg?2wnfsz#icomoon") format("svg");
   font-weight: normal;
-  font-style: normal; }
-
-.mi {
-  font-family: 'mi' !important;
-  speak: none;
   font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-
-.mi-favorite::before {
-  content: "\e87d"; }
-
-.mi-unfavorite::before {
-  content: "\e87e"; }
 
 /* = Vars
 ----------------------------------------------------------------------------- */
@@ -208,14 +193,14 @@ textarea.form-error {
   font-size: 0.9em;
   margin-bottom: 15px; }
 
+#search-opener,
+#search-form {
+  float: right; }
+
 .search::after {
   content: none;
   clear: both;
   display: block; }
-
-#search-opener,
-#search-form {
-  float: right; }
 
 .btn {
   border: 1px solid transparent;
@@ -447,21 +432,20 @@ header nav a span {
 #listing article .bookmark-icon,
 #listing article .read-icon {
   color: #ef5350;
-  font-size: 1.2em; }
+  font-family: 'icomoon';
+  font-size: 26px; }
 
 #listing article[data-item-bookmark="0"] .bookmark-icon::before {
-  content: '\e87e';
-  font-family: 'mi'; }
+  content: "♡"; }
 
 #listing article[data-item-bookmark="1"] .bookmark-icon::before {
-  content: '\e87d';
-  font-family: 'mi'; }
+  content: "♥"; }
 
 #listing article[data-item-status="read"] .read-icon::before {
-  content: '✘'; }
+  content: "☑"; }
 
 #listing article[data-item-status="unread"] .read-icon::before {
-  content: '✔'; }
+  content: "🗸"; }
 
 #listing article .item-title {
   display: -webkit-box;
@@ -544,6 +528,7 @@ header nav a span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 0.9rem;
   list-style-type: none; }
 
 #current-item .item-infos li ~ li::before {
@@ -559,18 +544,17 @@ header nav a span {
   text-decoration: underline; }
 
 #current-item .bookmark-icon {
-  font-family: 'mi';
-  font-size: 1.4rem;
-  line-height: 23px; }
+  font-family: 'icomoon';
+  font-size: 1.3rem; }
 
 #current-item .item-infos a.bookmark-icon:hover {
   text-decoration: none; }
 
-#current-item .bookmark-icon::after {
-  content: "\e87e"; }
+#current-item[data-item-bookmark="0"] .bookmark-icon::after {
+  content: "♡"; }
 
 #current-item[data-item-bookmark="1"] .bookmark-icon::after {
-  content: "\e87d"; }
+  content: "♥"; }
 
 #current-item .bottom {
   display: -webkit-box;
