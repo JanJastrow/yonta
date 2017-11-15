@@ -10,6 +10,7 @@ A pretty theme for Miniflux, based on the [Yonta](https://github.com/meradoou/yo
 ### v0.1
 - Uses OS native font
 - Optimisations for mobile usage
+- Uses webfont icons via [IcoMoon](https://icomoon.io/) ([Entypo+](http://www.entypo.com/), [Material Icons](https://material.io/icons/))
 
 ## Tested with
 - Firefox 55.x
