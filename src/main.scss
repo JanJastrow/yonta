@@ -22,7 +22,7 @@ html {
 }
 
 body {
-    background-color: #efebe9;
+    background-color: $color_main_background;
     color: #333;
     font-size: 1rem;
     font-family: $font-sansserif;
@@ -125,7 +125,7 @@ input[type="password"],
 input[type="number"],
 input[type="text"] {
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: $border_radius;
     box-shadow: inset 0 1px 3px #ddd;
     font-size: 1rem;
     line-height: 1.7;
@@ -139,8 +139,8 @@ input[type="password"]:focus,
 input[type="number"]:focus,
 input[type="text"]:focus,
 textarea:focus {
-    border-color: $color_redish;
-    box-shadow: 0 0 8px $color_redish;
+    border-color: $color_main_color;
+    box-shadow: 0 0 8px $color_main_color;
     color: #333;
     outline: 0;
 }
@@ -152,7 +152,7 @@ input[type="number"] {
 select {
     background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: $border_radius;
     box-shadow: inset 0 1px 3px #ddd;
     box-sizing: border-box;
     display: inline-block;
@@ -185,7 +185,7 @@ textarea {
 }
 
 .form-actions a {
-    color: $color_redish;
+    color: $color_main_color;
     margin: 0 10px;
 
     &.btn {
@@ -227,7 +227,7 @@ textarea.form-error {
 
 .btn {
     border: 1px solid transparent;
-    border-radius: 5px;
+    border-radius: $border_radius;
     cursor: pointer;
     font-size: 1.2rem;
     font-family: inherit;
@@ -241,7 +241,7 @@ textarea.form-error {
 }
 
 .btn-red {
-    background-color: $color_redish;
+    background-color: $color_main_color;
     color: #fff;
     text-decoration: none;
 }
@@ -277,7 +277,7 @@ form #grouplist {
         font-size: 1.5rem;
 
         input:checked + span {
-            color: $color_redish;
+            color: $color_main_color;
         }
     }
 }
@@ -305,7 +305,7 @@ header nav ul {
 
 header nav a,
 header nav .menu-more-switcher {
-    background-color: $color_redish;
+    background-color: $color_main_color;
     color: #fff;
     font-size: 0.8rem;
     padding: 5px;
@@ -333,7 +333,7 @@ header nav a span {
     top: 55px;
     right: 5px;
     left: 5px;
-    background-color: $color_redish;
+    background-color: $color_main_color;
 
     li {
         margin-bottom: 1px;
@@ -358,7 +358,7 @@ header nav a span {
     margin: 20px auto;
 
     a {
-        background-color: $color_redish;
+        background-color: $color_main_color;
         color: #fff;
         font-size: 0.8rem;
         list-style-type: none;
@@ -401,7 +401,7 @@ header nav a span {
         line-height: 1.7;
 
         &.active a {
-            color: $color_redish;
+            color: $color_main_color;
             text-decoration: underline;
         }
 
@@ -412,7 +412,7 @@ header nav a span {
             text-decoration: none;
 
             &:hover {
-                color: $color_redish;
+                color: $color_main_color;
                 text-decoration: underline;
             }
         }
@@ -431,7 +431,7 @@ header nav a span {
     }
 
     a {
-        color: $color_redish;
+        color: $color_main_color;
         font-weight: bold;
         font-size: 1rem;
         text-decoration: none;
@@ -457,7 +457,7 @@ header nav a span {
         margin-right: 10px;
     }
     a {
-        color: $color_redish;
+        color: $color_main_color;
         font-weight: bold;
         font-size: 1.1rem;
         text-decoration: none;
@@ -476,7 +476,7 @@ header nav a span {
 [data-item-page="feeds"] form,
 [data-item-page="config"] section {
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: $border_radius;
     margin-bottom: 10px;
     padding: 5px 10px;
 }
@@ -497,24 +497,36 @@ header nav a span {
 
 #listing article .bookmark-icon,
 #listing article .read-icon {
-    color: $color_redish;
+    color: $color_main_color;
     font-family: 'icomoon';
     font-size: 26px;
 }
 
 #listing article[data-item-bookmark="0"] .bookmark-icon::before {
+    color: rgba($color_main_color, 0.5);
     content: $icon-heart-outlined;
+}
+
+#listing article[data-item-bookmark="0"] .bookmark-icon:hover::before {
+    color: $color_main_color;
+    content: $icon-heart;
 }
 
 #listing article[data-item-bookmark="1"] .bookmark-icon::before {
     content: $icon-heart;
 }
 
-#listing article[data-item-status="read"] .read-icon::before {
-    content: $icon-check_box;
+#listing article[data-item-status="unread"] .read-icon::before {
+    color: rgba($color_main_color, 0.5);
+    content: $icon-check;
 }
 
-#listing article[data-item-status="unread"] .read-icon::before {
+#listing article[data-item-status="unread"] .read-icon:hover::before {
+    color: $color_main_color;
+    content: $icon-check;
+}
+
+#listing article[data-item-status="read"] .read-icon::before {
     content: $icon-check;
 }
 
@@ -572,7 +584,7 @@ header nav a span {
 }
 
 #listing article .item-menu a:hover {
-    color: $color_redish;
+    color: $color_main_color;
     text-decoration: underline;
 }
 
@@ -585,7 +597,7 @@ header nav a span {
 #current-item,
 .panel {
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: $border_radius;
     padding: 10px;
 }
 
@@ -622,7 +634,7 @@ header nav a span {
 }
 
 #current-item .item-infos a:hover {
-    color: $color_redish;
+    color: $color_main_color;
     text-decoration: underline;
 }
 
@@ -654,7 +666,7 @@ header nav a span {
 }
 
 #current-item .bottom a {
-    color: $color_redish;
+    color: $color_main_color;
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
@@ -723,13 +735,13 @@ header nav a span {
 }
 
 #current-item #item-content a {
-    color: darken($color_redish, 20%);
+    color: darken($color_main_color, 20%);
     text-decoration: none;
 }
 
 #current-item #item-content a:hover,
 #current-item #item-content a:focus {
-    color: darken($color_redish, 30%);
+    color: darken($color_main_color, 30%);
     text-decoration: underline;
 }
 
@@ -768,11 +780,11 @@ header nav a span {
 }
 
 [data-item-page="config"] a {
-    color: darken($color_redish, 20%);
+    color: darken($color_main_color, 20%);
 }
 
 [data-item-page="config"] a:hover {
-    color: $color_redish;
+    color: $color_main_color;
     text-decoration: underline;
 }
 
@@ -785,7 +797,7 @@ header nav a span {
 }
 
 [data-item-page="config"]  a[href="?action=new-user"] {
-    background-color: $color_redish;
+    background-color: $color_main_color;
     color: #fff;
     display: block;
     margin: 20px auto;
@@ -808,7 +820,7 @@ header nav a span {
         margin-right: 10px;
     }
     a {
-        color: $color_redish;
+        color: $color_main_color;
         font-weight: bold;
         font-size: 1.1rem;
         text-decoration: none;
@@ -882,7 +894,7 @@ header nav a span {
     margin-top: 10px;
 
     a {
-        color: $color_redish;
+        color: $color_main_color;
 
         &:hover {
             text-decoration: underline;
@@ -900,7 +912,7 @@ header nav a span {
 
 .feed-groups li a:hover,
 .feed-groups li.active a {
-    color: $color_redish;
+    color: $color_main_color;
     text-decoration: underline;
 }
 
@@ -909,7 +921,7 @@ header nav a span {
 .alert {
     background-color: transparent;
     border: 1px solid transparent;
-    border-radius: 6px;
+    border-radius: $border_radius;
     font-size: 1rem;
     margin: 15px 0;
     padding: 10px;
@@ -945,7 +957,7 @@ header nav a span {
 
     section {
         background-color: #fff;
-        border-radius: 6px;
+        border-radius: $border_radius;
         margin: 10px auto;
         max-width: 960px;
         overflow: hidden;
@@ -982,7 +994,7 @@ section .panel {
 }
 
 section .panel .panel-danger {
-    background-color: $color_redish;
+    background-color: $color_main_color;
     color: #fff;
 
     a {
