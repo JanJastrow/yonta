@@ -7,6 +7,7 @@
 
 @import 'webfonts';
 @import 'vars';
+@import 'mixins';
 
 /* = Reset
 ----------------------------------------------------------------------------- */
@@ -100,7 +101,7 @@ form {
 }
 
 label {
-    cursor: pointer;
+    @include clickable;
     display: block;
     font-size: 1.1rem;
     margin-bottom: 10px;
@@ -216,6 +217,7 @@ textarea.form-error {
 
 #search-opener,
 #search-form {
+    @include clickable;
     float: right;
 }
 
@@ -226,9 +228,9 @@ textarea.form-error {
 }
 
 .btn {
+    @include clickable;
     border: 1px solid transparent;
     border-radius: $border_radius;
-    cursor: pointer;
     font-size: 1.2rem;
     font-family: inherit;
     margin: 0 10px;
@@ -305,6 +307,7 @@ header nav ul {
 
 header nav a,
 header nav .menu-more-switcher {
+    @include clickable;
     background-color: $color_main_color;
     color: #fff;
     font-size: 0.8rem;
@@ -969,9 +972,9 @@ header nav a span {
 }
 
 #help-layer .btn-close {
+    @include clickable;
     background-color: #fff;
     border-radius: 50%;
-    cursor: pointer;
     display: inline-block;
     font-size: 1.3rem;
     height: 30px;

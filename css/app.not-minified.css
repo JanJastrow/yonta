@@ -17,6 +17,8 @@
 
 /* = Vars
 ----------------------------------------------------------------------------- */
+/* = Mixing
+----------------------------------------------------------------------------- */
 /* = Reset
 ----------------------------------------------------------------------------- */
 *, *::before, *::after {
@@ -195,6 +197,7 @@ textarea.form-error {
 
 #search-opener,
 #search-form {
+  cursor: pointer;
   float: right; }
 
 .search::after {
@@ -203,9 +206,9 @@ textarea.form-error {
   display: block; }
 
 .btn {
+  cursor: pointer;
   border: 1px solid transparent;
   border-radius: 6px;
-  cursor: pointer;
   font-size: 1.2rem;
   font-family: inherit;
   margin: 0 10px;
@@ -274,6 +277,7 @@ header nav ul {
 
 header nav a,
 header nav .menu-more-switcher {
+  cursor: pointer;
   background-color: #5393df;
   color: #fff;
   font-size: 0.8rem;
@@ -825,9 +829,9 @@ header nav a span {
     margin: 20px; }
 
 #help-layer .btn-close {
+  cursor: pointer;
   background-color: #fff;
   border-radius: 50%;
-  cursor: pointer;
   display: inline-block;
   font-size: 1.3rem;
   height: 30px;

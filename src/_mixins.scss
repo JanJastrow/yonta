@@ -1,0 +1,8 @@
+/* = Mixing
+----------------------------------------------------------------------------- */
+
+@mixin clickable {
+    cursor: pointer;
+}
+
+// Fixes an bug that gave me an headache for hours - http://gravitydept.com/blog/js-click-event-bubbling-on-ios
