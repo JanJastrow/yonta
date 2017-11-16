@@ -39,17 +39,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 blockquote {
-    border-left: 4px solid #ddd;
-    color: #888;
-    line-height: 1.4em;
-    margin-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-left: 25px;
+    background-color: rgba($color_main_color, 0.05);
+    border-top: 1px solid rgba($color_main_color, 0.3);
+    border-right: 1px solid rgba($color_main_color, 0.3);
+    border-bottom: 1px solid rgba($color_main_color, 0.3);
+    border-left: 4px solid rgba($color_main_color, 0.3);
+    border-top-right-radius: $border_radius;
+    border-bottom-right-radius: $border_radius;
+    color: #666;
+    line-height: 1.5em;
+    margin-left: 0.8em;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    padding: 0.3em 0.8em 0.3em 0.8em;
 
-    & + p {
-        color: #555;
-        font-style: italic;
+    p:last-of-type {
+        margin-bottom: 0 !important;
     }
 }
 
