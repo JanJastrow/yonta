@@ -19,7 +19,7 @@
 }
 
 html {
-    font-size: 12pt;
+    font-size: 16px;
 }
 
 body {
@@ -681,7 +681,7 @@ header nav a span {
 
 #current-item #item-content {
     font-size: 1rem;
-    line-height: 28px;
+    line-height: 1.75em;
     margin: 20px auto;
     overflow: hidden;
 }
@@ -1070,7 +1070,7 @@ section .panel .panel-danger {
     }
 
     #current-item #item-content {
-        line-height: 24px;
+        line-height: 1.5em;
     }
 
     [data-item-page="config"] table th:nth-child(2),
