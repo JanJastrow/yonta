@@ -141,7 +141,7 @@ input[type="number"] {
   width: 3em; }
 
 select {
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 6px;
   -webkit-box-shadow: inset 0 1px 3px #ddd;
@@ -181,7 +181,7 @@ textarea {
   color: #5393df;
   margin: 0 10px; }
   .form-actions a.btn {
-    color: #fff; }
+    color: #ffffff; }
 
 .form-actions a:hover {
   text-decoration: inherit; }
@@ -218,23 +218,18 @@ textarea.form-error {
   font-family: inherit;
   margin: 0 10px;
   padding: 10px; }
+  .btn:hover, .btn:focus {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.1)));
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1)); }
 
 .btn-blue {
   background-color: #0078e7;
-  color: #fff; }
+  color: #ffffff; }
 
 .btn-red {
-  background-color: #5393df;
-  color: #fff;
+  background-color: #de0909;
+  color: #ffffff;
   text-decoration: none; }
-
-.btn:focus,
-.btn:hover,
-[data-item-page="config"] a[href="?action=new-user"]:focus,
-[data-item-page="config"] a[href="?action=new-user"]:hover {
-  filter: alpha(opacity=90);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.1)));
-  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1)); }
 
 code,
 pre {
@@ -244,7 +239,7 @@ pre {
   display: block;
   overflow: hidden;
   margin: 10px;
-  color: #fff; }
+  color: #ffffff; }
 
 form #grouplist {
   display: -webkit-box;
@@ -284,7 +279,7 @@ header nav a,
 header nav .menu-more-switcher {
   cursor: pointer;
   background-color: #5393df;
-  color: #fff;
+  color: #ffffff;
   font-size: 0.8rem;
   padding: 5px;
   text-decoration: none; }
@@ -312,7 +307,7 @@ header nav a span {
     margin-bottom: 1px; }
   #menu-more a {
     padding: 5px 10px;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     display: block; }
     #menu-more a:hover, #menu-more a:active {
@@ -328,7 +323,7 @@ header nav a span {
   margin: 20px auto; }
   #items-paging a {
     background-color: #5393df;
-    color: #fff;
+    color: #ffffff;
     font-size: 0.8rem;
     list-style-type: none;
     margin-left: 5px;
@@ -392,38 +387,13 @@ header nav a span {
     .page-header > ul a:hover {
       text-decoration: underline; }
 
-/* = Prefences
------------------------------------------------------------------------------ */
-[data-item-page="config"] nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  list-style-type: none;
-  margin: 20px auto; }
-  [data-item-page="config"] nav ul li {
-    margin-right: 10px; }
-  [data-item-page="config"] nav ul a {
-    color: #5393df;
-    font-weight: bold;
-    font-size: 1.1rem;
-    text-decoration: none; }
-
-[data-item-page="config"] nav a:hover,
-[data-item-page="config"] nav .active a {
-  text-decoration: underline; }
-
 /* = Articles
 ----------------------------------------------------------------------------- */
 #listing article,
 [data-item-page="feeds"] article,
 [data-item-page="feeds"] form,
 [data-item-page="config"] section {
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 6px;
   margin-bottom: 10px;
   padding: 5px 10px; }
@@ -524,7 +494,7 @@ header nav a span {
 ----------------------------------------------------------------------------- */
 #current-item,
 .panel {
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 6px;
   padding: 10px; }
 
@@ -666,25 +636,49 @@ header nav a span {
 
 /* = Config
 ----------------------------------------------------------------------------- */
+[data-item-page="config"] nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style-type: none;
+  margin: 20px auto; }
+  [data-item-page="config"] nav ul li {
+    margin-right: 10px; }
+  [data-item-page="config"] nav ul a {
+    color: #5393df;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none; }
+
+[data-item-page="config"] nav a:hover,
+[data-item-page="config"] nav .active a {
+  text-decoration: underline; }
+
 [data-item-page="config"] table {
+  border: 1px solid #7f7d7c;
   border-collapse: collapse;
   font-size: 1.2rem;
   width: 100%; }
 
 [data-item-page="config"] table th {
-  background-color: #7f7d7c;
-  color: #fff;
-  padding: 10px 0; }
+  background-color: #103056;
+  color: #ffffff;
+  padding: 8px 0; }
 
 [data-item-page="config"] table td {
-  padding: 10px 0;
+  border: 1px solid #7f7d7c;
+  padding: 8px 0;
   text-align: center; }
 
 [data-item-page="config"] a {
   color: #2060ac; }
 
 [data-item-page="config"] a:hover {
-  color: #5393df;
   text-decoration: underline; }
 
 [data-item-page="config"] .options {
@@ -695,12 +689,17 @@ header nav a span {
 
 [data-item-page="config"] a[href="?action=new-user"] {
   background-color: #5393df;
-  color: #fff;
+  color: #ffffff;
   display: block;
   margin: 20px auto;
   max-width: 170px;
   padding: 10px;
   text-align: center; }
+
+[data-item-page="config"] a[href="?action=new-user"]:focus,
+[data-item-page="config"] a[href="?action=new-user"]:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.1)));
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1)); }
 
 /* = Subscriptions > Feeds
 ----------------------------------------------------------------------------- */
@@ -802,7 +801,7 @@ header nav a span {
 .alert-success {
   background-color: #009688;
   border-color: #007d71;
-  color: #fff; }
+  color: #ffffff; }
 
 .alert-error {
   background-color: #ffab00;
@@ -824,7 +823,7 @@ header nav a span {
   top: 0;
   bottom: 0; }
   #help-layer section {
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 6px;
     margin: 10px auto;
     max-width: 960px;
@@ -835,7 +834,7 @@ header nav a span {
 
 #help-layer .btn-close {
   cursor: pointer;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 50%;
   display: inline-block;
   font-size: 1.3rem;
@@ -856,9 +855,9 @@ section .panel {
 
 section .panel .panel-danger {
   background-color: #5393df;
-  color: #fff; }
+  color: #ffffff; }
   section .panel .panel-danger a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: underline; }
 
 /* = Media query
