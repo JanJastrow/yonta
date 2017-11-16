@@ -29,7 +29,7 @@
   word-wrap: break-word; }
 
 html {
-  font-size: 12pt; }
+  font-size: 16px; }
 
 body {
   background-color: #e2eaec;
@@ -44,16 +44,21 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, Times, serif; }
 
 blockquote {
-  border-left: 4px solid #ddd;
-  color: #888;
-  line-height: 1.4em;
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-left: 25px; }
-  blockquote + p {
-    color: #555;
-    font-style: italic; }
+  background-color: rgba(83, 147, 223, 0.05);
+  border-top: 1px solid rgba(83, 147, 223, 0.3);
+  border-right: 1px solid rgba(83, 147, 223, 0.3);
+  border-bottom: 1px solid rgba(83, 147, 223, 0.3);
+  border-left: 4px solid rgba(83, 147, 223, 0.3);
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  color: #666;
+  line-height: 1.5em;
+  margin-left: 0.8em;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+  padding: 0.3em 0.8em 0.3em 0.8em; }
+  blockquote p:last-of-type {
+    margin-bottom: 0 !important; }
 
 q {
   color: purple;
@@ -593,7 +598,7 @@ header nav a span {
 
 #current-item #item-content {
   font-size: 1rem;
-  line-height: 28px;
+  line-height: 1.75em;
   margin: 20px auto;
   overflow: hidden; }
 
@@ -899,7 +904,7 @@ section .panel .panel-danger {
   #current-item .item-infos li ~ li::before {
     content: none; }
   #current-item #item-content {
-    line-height: 24px; }
+    line-height: 1.5em; }
   [data-item-page="config"] table th:nth-child(2),
   [data-item-page="config"] table th:nth-child(3),
   [data-item-page="config"] table td:nth-child(2),
