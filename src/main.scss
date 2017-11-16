@@ -450,33 +450,6 @@ header nav a span {
     }
 }
 
-
-/* = Prefences
------------------------------------------------------------------------------ */
-
-[data-item-page="config"] nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    list-style-type: none;
-    margin: 20px auto;
-
-    li {
-        margin-right: 10px;
-    }
-    a {
-        color: $color_main_color;
-        font-weight: bold;
-        font-size: 1.1rem;
-        text-decoration: none;
-    }
-}
-
-[data-item-page="config"] nav a:hover,
-[data-item-page="config"] nav .active a {
-    text-decoration: underline;
-}
-
  /* = Articles
 ----------------------------------------------------------------------------- */
 #listing article,
@@ -770,6 +743,30 @@ header nav a span {
 
  /* = Config
 ----------------------------------------------------------------------------- */
+
+[data-item-page="config"] nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 20px auto;
+
+    li {
+        margin-right: 10px;
+    }
+    a {
+        color: $color_main_color;
+        font-weight: bold;
+        font-size: 1.1rem;
+        text-decoration: none;
+    }
+}
+
+[data-item-page="config"] nav a:hover,
+[data-item-page="config"] nav .active a {
+    text-decoration: underline;
+}
+
 [data-item-page="config"] table {
     border-collapse: collapse;
     font-size: 1.2rem;
