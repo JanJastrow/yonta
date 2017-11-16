@@ -156,7 +156,7 @@ input[type="number"] {
 }
 
 select {
-    background-color: #fff;
+    background-color: $color_white;
     border: 1px solid #ccc;
     border-radius: $border_radius;
     box-shadow: inset 0 1px 3px #ddd;
@@ -195,7 +195,7 @@ textarea {
     margin: 0 10px;
 
     &.btn {
-        color: #fff;
+        color: $color_white;
     }
 }
 
@@ -244,12 +244,12 @@ textarea.form-error {
 
 .btn-blue {
     background-color: $color_blueish;
-    color: #fff;
+    color: $color_white;
 }
 
 .btn-red {
-    background-color: $color_main_color;
-    color: #fff;
+    background-color: $color_redish;
+    color: $color_white;
     text-decoration: none;
 }
 
@@ -270,7 +270,7 @@ pre {
     display: block;
     overflow: hidden;
     margin: 10px;
-    color: #fff;
+    color: $color_white;
 }
 
 form #grouplist {
@@ -314,7 +314,7 @@ header nav a,
 header nav .menu-more-switcher {
     @include clickable;
     background-color: $color_main_color;
-    color: #fff;
+    color: $color_white;
     font-size: 0.8rem;
     padding: 5px;
     text-decoration: none;
@@ -349,7 +349,7 @@ header nav a span {
 
     a {
         padding: 5px 10px;
-        color: #fff;
+        color: $color_white;
         text-decoration: none;
         display: block;
 
@@ -367,7 +367,7 @@ header nav a span {
 
     a {
         background-color: $color_main_color;
-        color: #fff;
+        color: $color_white;
         font-size: 0.8rem;
         list-style-type: none;
         margin-left: 5px;
@@ -483,7 +483,7 @@ header nav a span {
 [data-item-page="feeds"] article,
 [data-item-page="feeds"] form,
 [data-item-page="config"] section {
-    background-color: #fff;
+    background-color: $color_white;
     border-radius: $border_radius;
     margin-bottom: 10px;
     padding: 5px 10px;
@@ -604,7 +604,7 @@ header nav a span {
 ----------------------------------------------------------------------------- */
 #current-item,
 .panel {
-    background-color: #fff;
+    background-color: $color_white;
     border-radius: $border_radius;
     padding: 10px;
 }
@@ -778,8 +778,8 @@ header nav a span {
 
 [data-item-page="config"] table th {
     background-color: $color_greyish;
-    color: #fff;
     padding: 10px 0;
+    color: $color_white;
 }
 
 [data-item-page="config"] table td {
@@ -806,7 +806,7 @@ header nav a span {
 
 [data-item-page="config"] a[href="?action=new-user"] {
     background-color: $color_main_color;
-    color: #fff;
+    color: $color_white;
     display: block;
     margin: 20px auto;
     max-width: 170px;
@@ -938,7 +938,7 @@ header nav a span {
 .alert-success {
     background-color: $color_turquoise;
     border-color: darken($color_turquoise, 5%);
-    color: #fff;
+    color: $color_white;
 }
 
 .alert-error {
@@ -964,7 +964,7 @@ header nav a span {
     bottom: 0;
 
     section {
-        background-color: #fff;
+        background-color: $color_white;
         border-radius: $border_radius;
         margin: 10px auto;
         max-width: 960px;
@@ -978,7 +978,7 @@ header nav a span {
 
 #help-layer .btn-close {
     @include clickable;
-    background-color: #fff;
+    background-color: $color_white;
     border-radius: 50%;
     display: inline-block;
     font-size: 1.3rem;
@@ -1003,10 +1003,10 @@ section .panel {
 
 section .panel .panel-danger {
     background-color: $color_main_color;
-    color: #fff;
+    color: $color_white;
 
     a {
-        color: #fff;
+        color: $color_white;
         text-decoration: underline
     }
 }
