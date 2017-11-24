@@ -569,6 +569,11 @@ header nav a span {
     display: none
 }
 
+#listing article .preview-full-content,
+#listing article .preview {
+    margin-top: 0.5em;
+}
+
  /* = Single
 ----------------------------------------------------------------------------- */
 #current-item,
