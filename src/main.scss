@@ -839,8 +839,14 @@ header nav a span {
     text-decoration: underline;
 }
 
-.items article[data-feed-disabled] {
-    background-color: #E0E0E0;
+.items article[data-feed-disabled="1"] {
+    background-color: rgba(0,0,0,0.1);
+
+    h2 span:first-of-type {
+        border: 1px dashed $color_redish;
+        color: $color_redish;
+        padding: 0 .2em
+    }
 }
 
 .items article h2 {
@@ -883,7 +889,7 @@ header nav a span {
 }
 
 .items article .feed-parsing-error {
-    color: $color_notice;
+    color: $color_turquoise;
     display: none;
     font-size: 1rem;
     margin-top: 10px;
