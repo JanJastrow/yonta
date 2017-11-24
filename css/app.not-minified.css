@@ -251,7 +251,7 @@ form #grouplist {
   form #grouplist label {
     margin-right: 10px;
     margin-bottom: 10px;
-    font-size: 1.5rem; }
+    font-size: 1.1rem; }
     form #grouplist label input:checked + span {
       color: #5393df; }
 
@@ -726,8 +726,12 @@ header nav a span {
 [data-item-page="feeds"] nav .active a {
   text-decoration: underline; }
 
-.items article[data-feed-disabled] {
-  background-color: #E0E0E0; }
+.items article[data-feed-disabled="1"] {
+  background-color: rgba(0, 0, 0, 0.1); }
+  .items article[data-feed-disabled="1"] h2 span:first-of-type {
+    border: 1px dashed #de0909;
+    color: #de0909;
+    padding: 0 .2em; }
 
 .items article h2 {
   font-size: 1.2rem;
@@ -758,7 +762,7 @@ header nav a span {
   margin-top: 10px; }
 
 .items article .feed-parsing-error {
-  color: #ffab00;
+  color: #009688;
   display: none;
   font-size: 1rem;
   margin-top: 10px; }
