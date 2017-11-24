@@ -658,55 +658,66 @@ header nav a span {
     text-decoration: underline;
 }
 
+#listing article .preview-full-content,
 #current-item #item-content {
     font-size: 1rem;
     line-height: 1.75em;
     margin: 20px auto;
     overflow: hidden;
-}
 
-#current-item #item-content img {
-    display: block;
-    margin: 15px auto;
-    max-width: 100%;
-}
+    img {
+       display: block;
+       margin: 15px auto;
+       max-width: 100%;
+    }
 
-#current-item #item-content p {
-    margin-bottom: 0.65em;
-}
+    p {
+       margin-bottom: 0.65em;
+    }
 
-#current-item #item-content h1,
-#current-item #item-content h2,
-#current-item #item-content h3,
-#current-item #item-content h4,
-#current-item #item-content h5,
-#current-item #item-content h6 {
-    margin-bottom: 10px;
-    margin-top: 15px;
-}
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
 
-#current-item #item-content h1 {
-    font-size: 1.55rem;
-}
+    h1 {
+        font-size: 1.55rem;
+    }
 
-#current-item #item-content h2 {
-    font-size: 1.45rem;
-}
+    h2 {
+        font-size: 1.45rem;
+    }
 
-#current-item #item-content h3 {
-    font-size: 1.35rem;
-}
+    h3 {
+        font-size: 1.35rem;
+    }
 
-#current-item #item-content h4 {
-    font-size: 1.3rem;
-}
+    h4 {
+        font-size: 1.3rem;
+    }
 
-#current-item #item-content h5 {
-    font-size: 1.25rem;
-}
+    h5 {
+        font-size: 1.25rem;
+    }
 
-#current-item #item-content h6 {
-    font-size: 1.2rem;
+    h6 {
+        font-size: 1.2rem;
+    }
+
+    a {
+        color: darken($color_main_color, 20%);
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: darken($color_main_color, 30%);
+            text-decoration: underline;
+        }
+    }
+
+    figure img {
+        margin-bottom: 5px;
+    }
 }
 
 #current-item #item-content ul,
@@ -716,30 +727,15 @@ header nav a span {
     margin: 10px 30px;
 }
 
-#current-item #item-content a {
-    color: darken($color_main_color, 20%);
-    text-decoration: none;
-}
-
-#current-item #item-content a:hover,
-#current-item #item-content a:focus {
-    color: darken($color_main_color, 30%);
-    text-decoration: underline;
-}
-
 #current-item figure {
     display: block;
     margin: 10px auto;
     max-width: 100%;
     overflow: hidden;
-}
 
-#current-item #item-content figure img {
-    margin-bottom: 5px;
-}
-
-#current-item figure figcaption {
-    margin-bottom: 15px;
+    figcaption {
+        margin-bottom: 15px;
+    }
 }
 
  /* = Config
