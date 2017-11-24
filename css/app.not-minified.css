@@ -404,9 +404,8 @@ header nav a span {
   margin-left: 0.2em; }
   #listing article .item-icons a {
     text-decoration: none; }
-
-#listing article .item-icons::after {
-  clear: both; }
+  #listing article .item-icons::after {
+    clear: both; }
 
 #listing article .bookmark-icon,
 #listing article .read-icon {
@@ -490,6 +489,10 @@ header nav a span {
 #listing article .item-menu [data-action="bookmark"] {
   display: none; }
 
+#listing article .preview-full-content,
+#listing article .preview {
+  margin-top: 0.5em; }
+
 /* = Single
 ----------------------------------------------------------------------------- */
 #current-item,
@@ -502,10 +505,9 @@ header nav a span {
   font-size: 1.6rem;
   line-height: 1.3;
   margin: 0 0 15px; }
-
-#current-item h1 a {
-  color: #484948;
-  text-decoration: none; }
+  #current-item h1 a {
+    color: #484948;
+    text-decoration: none; }
 
 #current-item nav.top {
   display: none; }
@@ -519,18 +521,15 @@ header nav a span {
   display: flex;
   font-size: 0.9rem;
   list-style-type: none; }
-
-#current-item .item-infos li ~ li::before {
-  content: '\00a0- '; }
-
-#current-item .item-infos a,
-#current-item .item-infos li {
-  color: #7f7d7c;
-  text-decoration: none; }
-
-#current-item .item-infos a:hover {
-  color: #5393df;
-  text-decoration: underline; }
+  #current-item .item-infos a,
+  #current-item .item-infos li {
+    color: #7f7d7c;
+    text-decoration: none; }
+  #current-item .item-infos a:hover {
+    color: #5393df;
+    text-decoration: underline; }
+  #current-item .item-infos li ~ li::before {
+    content: ' - '; }
 
 #current-item .bookmark-icon {
   font-family: 'icomoon';
@@ -553,59 +552,70 @@ header nav a span {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin: 20px 0; }
+  #current-item .bottom span {
+    margin-left: 15px; }
+  #current-item .bottom a {
+    color: #5393df;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none; }
+    #current-item .bottom a:hover {
+      text-decoration: underline; }
 
-#current-item .bottom span {
-  margin-left: 15px; }
-
-#current-item .bottom a {
-  color: #5393df;
-  font-size: 1rem;
-  font-weight: bold;
-  text-decoration: none; }
-
-#current-item .bottom a:hover {
-  text-decoration: underline; }
-
+/* Article views */
+#listing article .preview-full-content,
 #current-item #item-content {
   font-size: 1rem;
   line-height: 1.75em;
   margin: 20px auto;
   overflow: hidden; }
-
-#current-item #item-content img {
-  display: block;
-  margin: 15px auto;
-  max-width: 100%; }
-
-#current-item #item-content p {
-  margin-bottom: 0.65em; }
-
-#current-item #item-content h1,
-#current-item #item-content h2,
-#current-item #item-content h3,
-#current-item #item-content h4,
-#current-item #item-content h5,
-#current-item #item-content h6 {
-  margin-bottom: 10px;
-  margin-top: 15px; }
-
-#current-item #item-content h1 {
-  font-size: 1.55rem; }
-
-#current-item #item-content h2 {
-  font-size: 1.45rem; }
-
-#current-item #item-content h3 {
-  font-size: 1.35rem; }
-
-#current-item #item-content h4 {
-  font-size: 1.3rem; }
-
-#current-item #item-content h5 {
-  font-size: 1.25rem; }
-
-#current-item #item-content h6 {
-  font-size: 1.2rem; }
+  #listing article .preview-full-content img,
+  #current-item #item-content img {
+    display: block;
+    margin: 15px auto;
+    max-width: 100%; }
+  #listing article .preview-full-content p,
+  #current-item #item-content p {
+    margin-bottom: 0.65em; }
+  #listing article .preview-full-content h1, #listing article .preview-full-content h2, #listing article .preview-full-content h3, #listing article .preview-full-content h4, #listing article .preview-full-content h5, #listing article .preview-full-content h6,
+  #current-item #item-content h1,
+  #current-item #item-content h2,
+  #current-item #item-content h3,
+  #current-item #item-content h4,
+  #current-item #item-content h5,
+  #current-item #item-content h6 {
+    margin-bottom: 10px;
+    margin-top: 15px; }
+  #listing article .preview-full-content h1,
+  #current-item #item-content h1 {
+    font-size: 1.55rem; }
+  #listing article .preview-full-content h2,
+  #current-item #item-content h2 {
+    font-size: 1.45rem; }
+  #listing article .preview-full-content h3,
+  #current-item #item-content h3 {
+    font-size: 1.35rem; }
+  #listing article .preview-full-content h4,
+  #current-item #item-content h4 {
+    font-size: 1.3rem; }
+  #listing article .preview-full-content h5,
+  #current-item #item-content h5 {
+    font-size: 1.25rem; }
+  #listing article .preview-full-content h6,
+  #current-item #item-content h6 {
+    font-size: 1.2rem; }
+  #listing article .preview-full-content a,
+  #current-item #item-content a {
+    color: #2060ac;
+    text-decoration: none; }
+    #listing article .preview-full-content a:hover, #listing article .preview-full-content a:focus,
+    #current-item #item-content a:hover,
+    #current-item #item-content a:focus {
+      color: #184881;
+      text-decoration: underline; }
+  #listing article .preview-full-content figure img,
+  #current-item #item-content figure img {
+    margin-bottom: 5px; }
 
 #current-item #item-content ul,
 #current-item #item-content ol,
@@ -613,26 +623,13 @@ header nav a span {
   list-style-type: square;
   margin: 10px 30px; }
 
-#current-item #item-content a {
-  color: #2060ac;
-  text-decoration: none; }
-
-#current-item #item-content a:hover,
-#current-item #item-content a:focus {
-  color: #184881;
-  text-decoration: underline; }
-
 #current-item figure {
   display: block;
   margin: 10px auto;
   max-width: 100%;
   overflow: hidden; }
-
-#current-item #item-content figure img {
-  margin-bottom: 5px; }
-
-#current-item figure figcaption {
-  margin-bottom: 15px; }
+  #current-item figure figcaption {
+    margin-bottom: 15px; }
 
 /* = Config
 ----------------------------------------------------------------------------- */
@@ -771,10 +768,10 @@ header nav a span {
   display: block; }
 
 .items article .feed-groups {
-  margin-top: 10px; }
+  margin-top: 0.3em; }
 
 .items article .item-menu {
-  margin-top: 10px; }
+  margin-top: 0.3em; }
   .items article .item-menu a {
     color: #5393df; }
     .items article .item-menu a:hover {
