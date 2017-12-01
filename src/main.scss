@@ -4,7 +4,6 @@
 
 /* = Imports
 ----------------------------------------------------------------------------- */
-
 @import 'webfonts';
 @import 'vars';
 @import 'mixins';
@@ -74,7 +73,6 @@ figcaption {
 
 /* = Containers
 ----------------------------------------------------------------------------- */
-
 body > header,
 body > .page,
 #miniflux {
@@ -657,7 +655,6 @@ header nav a span {
     }
 }
 
-
 /* Article views */
 #listing article .preview-full-content,
 #current-item #item-content {
@@ -741,7 +738,6 @@ header nav a span {
 
  /* = Config
 ----------------------------------------------------------------------------- */
-
 [data-item-page="config"] nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -817,7 +813,6 @@ header nav a span {
 
 /* = Subscriptions > Feeds
 ----------------------------------------------------------------------------- */
-
 [data-item-page="feeds"] nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -1020,7 +1015,6 @@ section .panel .panel-danger {
 
  /* = Media query
 ----------------------------------------------------------------------------- */
-
 @media only screen and (min-width: 920px) {
     #help-layer section {
         margin-top: 50px;
