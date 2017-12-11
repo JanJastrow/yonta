@@ -519,6 +519,7 @@ header nav a span {
     font-size: 1.2rem;
     font-weight: normal;
     text-decoration: none;
+    overflow-x: hidden;
 }
 
 #listing article[data-item-status="read"] .item-title a {
