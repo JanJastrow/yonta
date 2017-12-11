@@ -450,7 +450,8 @@ header nav a span {
   color: #333;
   font-size: 1.2rem;
   font-weight: normal;
-  text-decoration: none; }
+  text-decoration: none;
+  overflow-x: hidden; }
 
 #listing article[data-item-status="read"] .item-title a {
   color: #999; }
