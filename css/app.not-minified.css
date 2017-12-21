@@ -236,11 +236,22 @@ pre {
   background-color: #444;
   border-left: 4px solid #5393df;
   color: #ffffff;
-  display: block;
   font-family: monospace;
+  overflow: hidden; }
+
+code {
+  margin: 0.2em;
+  padding: 0.15em 0.3em; }
+
+pre {
+  display: block;
   margin: 0.8em 0.4em 0.8em 0.8em;
-  overflow: hidden;
   padding: 0.3em 0.6em; }
+
+pre code {
+  border-left: none;
+  margin: 0;
+  padding: 0; }
 
 form #grouplist {
   display: -webkit-box;
