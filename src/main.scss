@@ -261,6 +261,10 @@ pre {
     color: $color_white;
     font-family: monospace;
     overflow: hidden;
+
+    a {
+        color: inherit !important;
+    }
 }
 
 code {
