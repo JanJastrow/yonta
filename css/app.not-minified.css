@@ -238,6 +238,9 @@ pre {
   color: #ffffff;
   font-family: monospace;
   overflow: hidden; }
+  code a,
+  pre a {
+    color: inherit !important; }
 
 code {
   margin: 0.2em;

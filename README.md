@@ -1,6 +1,6 @@
 # Yonta-Fork (until I find a better name)
 
-A pretty theme for [Miniflux](https://miniflux.net/), based on the [Yonta](https://github.com/meradoou/yonta) theme by [meradoou](https://github.com/meradoou).
+A pretty theme for [Miniflux](https://miniflux.net/) (v1.x), based on the [Yonta](https://github.com/meradoou/yonta) theme by [meradoou](https://github.com/meradoou).
 
 ## Features
 - Responsive design
@@ -11,8 +11,8 @@ A pretty theme for [Miniflux](https://miniflux.net/), based on the [Yonta](https
 Tested with Miniflux v1.2.3 and the following setups:
 
 - Firefox 55.x
-- macOS 10.13 / Safari 11
-- iOS 11.1 / Safari 11
+- macOS 10.13+ / Safari 11+
+- iOS 11.1+ / Safari 11+
 - Android 6 / Chrome 62
 
 ## Screenshots
