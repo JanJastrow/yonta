@@ -92,8 +92,8 @@ form {
     padding-left: 15px;
 
     h3 {
-        font-weight: bold;
         font-size: 1.4rem;
+        font-weight: bold;
 
         &:first-child {
             margin-top: 0;
@@ -290,8 +290,8 @@ form #grouplist {
     margin: 20px auto;
 
     label {
-        margin-right: 10px;
         margin-bottom: 10px;
+        margin-right: 10px;
         font-size: 1.1rem;
 
         input:checked + span {
@@ -348,21 +348,21 @@ header nav a span {
 }
 
 #menu-more {
-    position: absolute;
-    top: 55px;
-    right: 5px;
-    left: 5px;
     background-color: $color_main_color;
+    left: 5px;
+    position: absolute;
+    right: 5px;
+    top: 55px;
 
     li {
         margin-bottom: 1px;
     }
 
     a {
-        padding: 5px 10px;
         color: $color_white;
-        text-decoration: none;
         display: block;
+        padding: 5px 10px;
+        text-decoration: none;
 
         &:hover,
         &:active {
@@ -770,8 +770,8 @@ header nav a span {
     }
     a {
         color: $color_main_color;
-        font-weight: bold;
         font-size: 1.1rem;
+        font-weight: bold;
         text-decoration: none;
     }
 }
@@ -845,8 +845,8 @@ header nav a span {
     }
     a {
         color: $color_main_color;
-        font-weight: bold;
         font-size: 1.1rem;
+        font-weight: bold;
         text-decoration: none;
     }
 }
@@ -978,12 +978,12 @@ header nav a span {
 /* = Help
 ----------------------------------------------------------------------------- */
 #help-layer {
+    bottom: 0;
     background-color: rgba(0, 0, 0, 0.9);
-    position: fixed;
     left: 0;
+    position: fixed;
     right: 0;
     top: 0;
-    bottom: 0;
 
     section {
         background-color: $color_white;
